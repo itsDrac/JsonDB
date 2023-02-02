@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "EditorPlugin",
+"class": &"JSONDB",
+"language": &"GDScript",
+"path": "res://addons/jsondb/jsondb.gd"
+}]
+_global_script_class_icons={
+"JSONDB": "res://addons/jsondb/JSONDB.svg"
+}
+
+[application]
+
+config/name="JsonDB"
+config/features=PackedStringArray("4.0", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/jsondb/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
